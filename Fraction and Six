@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,i;
+    cin>>n;
+    while(n--){
+            int l1,l2;
+    cin>>l1>>l2;
+    string s1,s2;
+    cin>>s1>>s2;
+    int count[26]={0};
+    for(i=0;i<l1;i++){
+        int l=s1[i]-'a';
+        count[l]++;
+    }
+    for(i=0;i<l2;i++){
+        int l=s2[i]-'a';
+        count[l]--;
+    }
+    int s='s'-'a';
+        int in='i'-'a';
+        int x='x'-'a';
+        int p=0;
+    for(i=0;i<26;i++){
+            if(i!=x&&i!=in&&i!=s){
+        if(count[x]==1&&count[in]==1&&count[s]==1&&count[i]==0){
+            p++;
+        }}
+    }
+
+    if(p==23) cout<<"YES"<<'\n';
+    else cout<<"NO"<<'\n';
+    }
+}
