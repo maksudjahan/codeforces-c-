@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int i=0;
+    long long n;
+    int b=0;
+    cin>>n;
+    while(n!=0){
+        int m=n%10;
+        n=n/10;
+        if(m==4||m==7){
+            b++;
+        }
+        i++;
+    }
+  if(b==4||b==7)   cout<<"YES"<<'\n';
+  else   cout<<"NO"<<'\n';
+cout<<endl;
+    return 0;
+    }
