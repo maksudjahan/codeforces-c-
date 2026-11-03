@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+int dis(int n){
+    int i=0;
+    int arr[10]={0};
+    while(n!=0){
+        arr[i]=n%10;
+        n=n/10;
+        i++;
+    }
+    int l=i;
+    sort(arr,arr+l);
+   for(i=0;i<l-1;i++){
+    if(arr[i]==arr[i+1]){
+        return 0;
+        break;
+    }
+   }
+   return 1;
+}
+int main()
+{
+    int n,i;
+    cin>>n;
+    for(i=1;i<9000;i++){
+    int x=dis(n+i);
+    if(x==1){
+        cout<<n+i;
+        break;
+    }
+    }
+cout<<endl;
+    return 0;
+    }
