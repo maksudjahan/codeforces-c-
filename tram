@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int i=1,t;
+    cin>>t;
+    int l=t;
+    int arr[t+1]={0};
+    arr[t]=0;
+    while(t--){
+        int a,b;
+        cin>>a>>b;
+       arr[i]=arr[i-1]-a+b;
+       i++;
+    }
+    sort(arr,arr+l+1);
+    cout<<arr[l];
+cout<<endl;
+    return 0;
+    }
