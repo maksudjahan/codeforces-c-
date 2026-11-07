@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+int t,g=1,i;
+char a='2';
+cin>>t;
+string pre,now;
+cin>>pre;
+for(i=1;i<t;i++){
+        cin>>now;
+    if(pre!=now){
+        g++;
+    }
+    pre=now;
+}
+cout<<g<<endl;
+}
