@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+int prime(long long n)
+{
+    bool j=true;
+    long long x =(long long) sqrt((long double)n);
+    if(n==0||n==1) {
+        j=false;
+    }
+    else if (n != x * x)
+    {
+        j=false;
+    }
+    else
+    {
+        for (long long i = 2; x>=i*i; i++)
+        {
+            if (x % i == 0)
+                j=false;
+        }
+    }
+    if (j)
+        return 1;
+    else
+        return 0;
+}
+int main()
+{
+    int n, i;
+    cin >> n;
+    while (n--)
+    {
+        long long a;
+        cin >> a;
+        int l = prime(a);
+        if (l == 0)
+            cout << "NO\n";
+        else
+            cout << "YES\n";
+    }
+    cout << endl;
+    return 0;
+}
